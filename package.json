@@ -1,17 +1,20 @@
 {
   "name": "reminder-notification",
+  "appId": "reminder",
   "version": "1.0.0",
   "description": "",
   "main": "main.js",
   "author": "Aidan Keighron",
   "license": "MIT",
   "devDependencies": {
-    "electron": "^25.3.2"
+    "electron": "^25.3.2",
+    "electron-packager": "^17.1.1"
   },
   "scripts": {
     "start": "electron ."
   },
   "dependencies": {
+    "node-notifier": "^10.0.1",
     "sound-play": "^1.1.0"
   }
 }

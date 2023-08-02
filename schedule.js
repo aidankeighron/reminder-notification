@@ -1,7 +1,6 @@
 window.addEventListener('DOMContentLoaded', () => {
     let timerActive = false;
     let timeouts = [];
-    
     function reminder() {
         if (timerActive) {
             let audio = new Audio("beep.wav");
@@ -20,7 +19,7 @@ window.addEventListener('DOMContentLoaded', () => {
         let id = setTimeout(reminder, 1000*60*5);
         timeouts.push(id);
         timerActive = true;
-    })
+    });
     
     document.getElementById('confirm').addEventListener('click', () => {
         while (timeouts.length > 0) {
@@ -51,5 +50,9 @@ window.addEventListener('DOMContentLoaded', () => {
         let id = setTimeout(reminder, 1000*60*60);
         timeouts.push(id);
         timerActive = true;
-    })
+    });
+    console.log("Scheduling Notification");
+    let id = setTimeout(reminder, 1000*60*60);
+    timeouts.push(id);
+    timerActive = true;
 })
