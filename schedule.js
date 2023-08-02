@@ -50,7 +50,14 @@ window.addEventListener('DOMContentLoaded', () => {
         let id = setTimeout(reminder, 1000*60*60);
         timeouts.push(id);
         timerActive = true;
+        const bars = document.querySelectorAll(".round-time-bar");
+        bars.forEach((bar) => {
+            bar.classList.remove("round-time-bar");
+            bar.offsetWidth;
+            bar.classList.add("round-time-bar");
+        });
     });
+
     console.log("Scheduling Notification");
     let id = setTimeout(reminder, 1000*60*60);
     timeouts.push(id);

@@ -2,14 +2,14 @@
 <html>
   <head>
     <meta charset="UTF-8">
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'">
+    <meta http-equiv="Content-Security-Policy" content="style-src 'self' 'unsafe-inline'; default-src 'self'; script-src 'self'">
     <title>Hello World!</title>
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <div>
       <center>
-        <h1>Reminder Notification</h1>
+        <h1 class="title">Reminder Notification</h1>
       </center>
       <label class="main" for="workout"> Workout
         <input type="checkbox" id="workout" name="workout" value="Workout">
@@ -26,19 +26,28 @@
       
       <button id="confirm">I got up</button>
       <button id="plus5">5 more minutes</button><br>
+      <div class="progressdiv">
+        
+        <label class="progressbar" for="workoutProgress">Workout progress:
+          <progress class="progressbar" id="workoutProgress" value="0" max="2"></progress><br>
+        </label>
+      </div>
       
-      <label class="progressbar" for="workoutProgress">Workout progress:
-        <progress class="progressbar" id="workoutProgress" value="0" max="2"></progress><br>
-      </label>
+      <div class="progressdiv">
+        <label class="progressbar" for="eatProgress">Eat progress:
+          <progress class="progressbar" id="eatProgress" value="0" max="3"></progress><br>
+        </label>
+      </div>
       
-      <label class="progressbar" for="eatProgress">Eat progress:
-        <progress class="progressbar" id="eatProgress" value="0" max="3"></progress><br>
-      </label>
+      <div class="progressdiv">
+    <label class="progressbar" for="stretchProgress">Stretch progress:
+      <progress id="stretchProgress" value="0" max="3"></progress>
+    </label>
+  </div>
       
-      <label class="progressbar" for="stretchProgress">Stretch progress:
-        <progress id="stretchProgress" value="0" max="3"></progress>
-      </label>
-
+      <div class="round-time-bar" data-style="smooth" style="--duration: 3600;">
+        <div></div>
+      </div>
     </div>
   </body>
 </html>

@@ -8,6 +8,11 @@ body {
     background: #2f3241;
     color: #74b1be;
     padding: 10px;
+    -webkit-app-region: drag;
+}
+
+.title {
+    margin: 5px;
 }
 
 button {
@@ -15,7 +20,7 @@ button {
     border: solid #74b1be 2px;
     color: #74b1be;
     margin: 5px;
-    margin-bottom: 10px;
+    margin-bottom: 5px;
 }
 
 .main {
@@ -24,6 +29,10 @@ button {
     padding-left: 25px;
     cursor: pointer;
     font-size: 20px;
+}
+
+.progressdiv {
+    margin-top: 10px;
 }
 
 input[type=checkbox] {
@@ -76,6 +85,29 @@ progress[value]::-webkit-progress-bar {
 }
 
 progress[value]::-webkit-progress-value {
-    background-image:-webkit-linear-gradient(left, #74b1be, #74b1be); #yea its shit but if it works it works
+    background-image:-webkit-linear-gradient(left, #74b1be, #74b1be); /* yea its shit but if it works it works */
+}
 
+.round-time-bar {
+    margin: 1rem;
+    overflow: hidden;
+    margin-top: 20px;
+}
+
+.round-time-bar div {
+height: 5px;
+    animation: roundtime calc(var(--duration) * 1s) steps(var(--duration))forwards;
+    transform-origin: left center;
+    background: linear-gradient(to bottom, #74b1be, #74b1be);
+}
+
+.round-time-bar[data-style="smooth"] div {
+    animation: roundtime calc(var(--duration) * 1s) linear forwards;
+}
+
+@keyframes roundtime {
+    to {
+        /* More performant than `width` */
+        transform: scaleX(0);
+    }
 }
