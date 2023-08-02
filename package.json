@@ -1,0 +1,17 @@
+{
+  "name": "reminder-notification",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "author": "Aidan Keighron",
+  "license": "MIT",
+  "devDependencies": {
+    "electron": "^25.3.2"
+  },
+  "scripts": {
+    "start": "electron ."
+  },
+  "dependencies": {
+    "sound-play": "^1.1.0"
+  }
+}
