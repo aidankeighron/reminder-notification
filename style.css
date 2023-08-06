@@ -8,6 +8,8 @@ body {
     background: #2f3241;
     color: #74b1be;
     padding: 10px;
+    /* -webkit-app-region: drag; */
+    -webkit-user-select: none;
     -webkit-app-region: drag;
 }
 
@@ -16,6 +18,7 @@ body {
 }
 
 button {
+    -webkit-app-region: no-drag;
     background-color: #2f3241;
     border: solid #74b1be 2px;
     color: #74b1be;
@@ -24,6 +27,7 @@ button {
 }
 
 .main {
+    -webkit-app-region: no-drag;
     display: block;
     position: relative;
     padding-left: 25px;
@@ -36,10 +40,12 @@ button {
 }
 
 input[type=checkbox] {
+    -webkit-app-region: no-drag;
     visibility: hidden;
 }
 
 .checkbox {
+    -webkit-app-region: no-drag;
     position: absolute;
     top: 0;
     left: 0;
@@ -50,16 +56,19 @@ input[type=checkbox] {
 }
 
 .checkbox:after {
+    -webkit-app-region: no-drag;
     content: "";
     position: absolute;
     display: none;
 }
     
 .main input:checked ~ .checkbox:after {
+    -webkit-app-region: no-drag;
     display: block;
 }
     
 .main .checkbox:after {
+    -webkit-app-region: no-drag;
     left: 6px;
     bottom: 6px;
     width: 4px;

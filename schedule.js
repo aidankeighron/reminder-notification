@@ -14,7 +14,7 @@ window.addEventListener('DOMContentLoaded', () => {
     document.getElementById('plus5').addEventListener('click', () => {
         while (timeouts.length > 0) {
             clearTimeout(timeouts.pop());
-        }
+        } // TODO use separate 5 min timer and turn off the 1 hour timer
         console.log("Extending Time");
         let id = setTimeout(reminder, 1000*60*5);
         timeouts.push(id);
